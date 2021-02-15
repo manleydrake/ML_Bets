@@ -26,7 +26,7 @@ The purpose of this application is to implement a machine learning algorithm tha
 * Azure/AWS
 ## High Level Steps for Development 
 1. Scrape NBA Stats using Python Script
-* Creating API Calls from [NBA Stats](Stats.NBA.com) 
+* Creating API Calls from [NBA Stats](https://www.nba.com/stats/) 
 * Clean data 
 * Creating/Updating Database 
 * Error Handling  
