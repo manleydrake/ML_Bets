@@ -42,7 +42,7 @@ The purpose of this application is to implement a machine learning algorithm tha
 
 ### Machine Learning Models
    The purpose of these algorithm are to predict a winning team, therefore, this is a classification problem, since a category needs to be predicted. All of these models will utilize trianning examples (past data), features (columns), target variable (variable we are trying to predict ie. winning team), and predictor variables (variables used to make predictions of the target variable).
-####K-nearest-neghbors (KNN) along with normalization. 
+#### K-nearest-neghbors (KNN) along with normalization. 
    The purpose of the KNN algorithm is to determine (predicit) which class is the most commonly appearing amoung the k closest training examples.
 
 3. Build Web API 
