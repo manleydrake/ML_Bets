@@ -16,6 +16,7 @@ view our [Dev Live site](https://dotnetappsqldb20210221184544.azurewebsites.net/
 [Azure Deployment](https://jasonwatmore.com/post/2020/01/10/react-aspnet-core-on-azure-with-sql-server-how-to-deploy-a-full-stack-app-to-microsoft-azure)
 [Connect Azure DB to ML ](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)
 [Create Azure DB for ML](https://docs.microsoft.com/en-us/azure/azure-sql/database/design-first-database-tutorial)
+[CRUD Functionality on ASP.Net](https://www.syncfusion.com/blogs/post/build-crud-application-with-asp-net-core-entity-framework-visual-studio-2019.aspx)
 ## Connect SQL to ASP. Net Server
 1. Right click on connection .sln file and hit publish 
 ![image](Insert .sltn view)
