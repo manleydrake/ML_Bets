@@ -58,4 +58,5 @@ The purpose of this application is to implement a machine learning algorithm tha
 
 [NBA MySQL Server](https://medium.com/@jman4190/building-an-nba-mysql-database-with-python-c653fa15333c) 
 
+[Azure with Jupyter Notebook](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-run-jupyter-notebooks)
 ## Getting Started 
