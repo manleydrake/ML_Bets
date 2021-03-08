@@ -1,0 +1,4 @@
+Font: Alice
+Colors: 
+	Main = #01233F
+	Secondary = #CF1717
