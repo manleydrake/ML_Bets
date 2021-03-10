@@ -18,6 +18,7 @@ view our [Dev Live site](https://dotnetappsqldb20210221184544.azurewebsites.net/
 [Create Azure DB for ML](https://docs.microsoft.com/en-us/azure/azure-sql/database/design-first-database-tutorial)
 [CRUD Functionality on ASP.Net](https://www.syncfusion.com/blogs/post/build-crud-application-with-asp-net-core-entity-framework-visual-studio-2019.aspx)
 [React Azure Deployment](https://www.pluralsight.com/guides/deploy-a-react-app-to-azure)
+[NBA Stats API for Live Banner](https://www.balldontlie.io/#introduction)
 ## Connect SQL to ASP. Net Server
 1. Right click on connection .sln file and hit publish 
 ![image](Insert .sltn view)
