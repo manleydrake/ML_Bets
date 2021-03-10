@@ -27,6 +27,13 @@ namespace MLBet.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000");
+                });
+            });
         }
 
         private void TestAPI()
@@ -48,6 +55,7 @@ namespace MLBet.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 
