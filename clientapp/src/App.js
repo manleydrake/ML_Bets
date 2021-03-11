@@ -1,17 +1,25 @@
-
 import './App.css';
 import {Test} from './Test'
-function App() {
+import Header from './Components/Navigation'
+import React,{ Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+
+export default class  App extends Component {
+  render(){
   return (
-    <>
-    <div className="container">
-     <h3 className="m-3 d-flex justify-content-center">
-       React JS Test
-     </h3>
-    </div>
-    <Test/>
-    </>
+          <div className="App">
+              <h1>Hello Home</h1>
+          </div>
+    
+    
   );
+  }
 }
 
-export default App;

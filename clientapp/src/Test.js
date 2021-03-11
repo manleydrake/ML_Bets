@@ -33,7 +33,7 @@ render(){
     return(
         <div>
         {this.state.deps.map(( deps2, index) => (
-            <h1>{deps2.date}</h1>
+            <h1> date: {deps2.date}</h1>
         ))}
          </div>
     )
