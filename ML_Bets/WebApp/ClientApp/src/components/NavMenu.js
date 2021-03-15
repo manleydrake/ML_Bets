@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, UncontrolledDropdown, DropdownToggle,DropdownItem, DropdownMenu, Table } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ReactDOM from "react-dom"
 import './NavMenu.css';
 
 export class NavMenu extends Component {
@@ -23,38 +24,50 @@ export class NavMenu extends Component {
 
     render() {
         return (
-            <header>
-                <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
-                    <Container>
-                        <NavbarBrand tag={Link} to="/">
-                            <img
-                                height='100'
-                                width='100'
-                                src="/MLBetsLogo.png"
-                                className="d-inline-block align-top"
-                                alt="ML Bets logo"
-                            />
-                        </NavbarBrand>
-                        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-                        <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
-                            <ul className="navbar-nav flex-grow">
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/">Odds</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/counter">Predictions</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/fetch-data">Stats</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/fetch-data">Documentation</NavLink>
-                                </NavItem>
-                            </ul>
-                        </Collapse>
-                    </Container>
-                </Navbar>
-            </header>
+            <>
+                <header>
+                    <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-2" light>
+                        <Container>
+                            <NavbarBrand tag={Link} to="/">
+                                ML Bets{/*<img
+                                    height='75'
+                                    width='75'
+                                    src="/MLBetsLogo.png"
+                                    className="d-inline-block align-top"
+                                    alt="ML Bets logo"
+                                />*/}
+                            </NavbarBrand>
+                            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                            <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
+                                <ul className="navbar-nav flex-grow">
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-dark" to="/odds">Odds</NavLink>
+                                    </NavItem>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-dark" to="/predictions">Predictions</NavLink>
+                                    </NavItem>
+                                    <UncontrolledDropdown nav inNavbar>
+                                        <DropdownToggle nav caret>
+                                            Stats
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem>
+                                                <NavLink tag={Link} className="text-dark" to="/player">Player</NavLink>
+                                            </DropdownItem>
+                                            <DropdownItem>
+                                                <NavLink tag={Link} className="text-dark" to="/team">Team</NavLink>
+                                            </DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledDropdown>
+                                    <NavItem>
+                                        <NavLink tag={Link} className="text-dark" to="/documentation">Documentation</NavLink>
+                                    </NavItem>
+                                </ul>
+                            </Collapse>
+                        </Container>
+                    </Navbar>
+                </header>
+            </>
         );
     }
 }
