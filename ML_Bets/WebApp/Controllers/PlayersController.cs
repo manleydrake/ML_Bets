@@ -32,6 +32,27 @@ namespace WebApp.Controllers
             IRestResponse<List<Player>> response = client.Execute<List<Player>>(request);
             return response.Data;
         }
+        [HttpGet("SearchPlayer/{FirstName}")]
+        public List<PlayerSearch> SearchPlayer(string FirstName)
+        {
+            var clientString = "https://balldontlie.io/api/v1/players?search=" + FirstName;
+            var client = new RestClient(clientString);
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse<List<PlayerSearch>> response = client.Execute<List<PlayerSearch>>(request);
+            return response.Data;
+        }
+        [HttpGet("GetPlayerStats/{id}")]
+        public List<PlayerStats> GetPlayerStats(string id)
+        {
+            var clientString = "https://balldontlie.io/api/v1/stats?season[]=2021&player_ids[]=" + id;
+            var client = new RestClient("https://balldontlie.io/api/v1/stats?season[]=2021&player_ids[]=237");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse<List<PlayerStats>> response = client.Execute<List<PlayerStats>>(request);
+            return response.Data;
+        }
     }
 }
+
 

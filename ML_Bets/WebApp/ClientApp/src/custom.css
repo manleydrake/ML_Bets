@@ -17,3 +17,8 @@ code {
     height:75px
 
 }
+.align-right {
+    position: absolute;
+    right: 0px;
+    padding: 10px;
+}

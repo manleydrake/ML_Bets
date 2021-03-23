@@ -32,4 +32,9 @@ namespace WebApp
         public List<Team> team {get; set;}
         public int turnover { get; set; }
     }
+    public class PlayerStats
+    {
+        public List<Stats> data { get; set; }
+        public List<Meta> meta { get; set; }
+    }
 }

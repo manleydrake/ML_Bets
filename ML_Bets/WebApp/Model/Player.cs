@@ -16,4 +16,19 @@ namespace WebApp
         public List<Team> team { get; set; }
         public int weight_pounds { get; set; }
     }
+
+    public class PlayerSearch
+    {
+        public List<Player> data { get; set; }
+        public List<Meta> meta { get; set; }
+    }
+    public class Meta
+    {
+        public int total_pages { get; set; }
+        public int current_page{ get; set; }
+        public int next_page { get; set; }
+        public int per_page { get; set; }
+        public int total_count { get; set; }
+
+    }
 }

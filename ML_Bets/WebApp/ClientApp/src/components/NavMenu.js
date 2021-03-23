@@ -25,8 +25,9 @@ export class NavMenu extends Component {
     render() {
         return (
             <>
-                <header>
-                    <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-2" light>
+
+                <header style={{backgroundColor:"white", width:"100%"}}>
+                    <Navbar style={{textAlign:"center"}}className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-2" light>
                         <Container>
                             <NavbarBrand tag={Link} to="/">
                                 ML Bets{/*<img
