@@ -9,7 +9,7 @@ export class Home extends Component {
         return (
             <>
                 <BookCard/>
-                <div >
+                <div className="hide" >
 
                     <iframe className="align-right" src="https://veri.bet/x-ajax-events-carousel-x?ref=widget" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style={{ width: "320px", height: "540px", margin: "0px", padding: "0px", backgroundColor: "#3b3937"}}></iframe>
 

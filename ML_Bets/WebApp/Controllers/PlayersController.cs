@@ -42,14 +42,25 @@ namespace WebApp.Controllers
             IRestResponse<List<PlayerSearch>> response = client.Execute<List<PlayerSearch>>(request);
             return response.Data;
         }
-        [HttpGet("GetPlayerStats/{id}")]
-        public List<PlayerStats> GetPlayerStats(string id)
+        [HttpGet("GetPlayerStats/{id}/{year}")]
+        public List<AllStats> GetPlayerStats(int id, int year)
         {
-            var clientString = "https://balldontlie.io/api/v1/stats?season[]=2021&player_ids[]=" + id;
-            var client = new RestClient("https://balldontlie.io/api/v1/stats?season[]=2021&player_ids[]=237");
+            var clientString = "https://www.balldontlie.io/api/v1/season_averages?season=" + year + "&player_ids[]=" + id;
+            //"https://www.balldontlie.io/api/v1/season_averages?season=2018&player_ids[]=" + id;
+            var client = new RestClient(clientString);
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
-            IRestResponse<List<PlayerStats>> response = client.Execute<List<PlayerStats>>(request);
+            IRestResponse<List<AllStats>> response = client.Execute<List<AllStats>>(request);
+            return response.Data;
+        }
+        [HttpGet("GetNextPage/{pg}")]
+        public List<AllPlayers> GetNextPage(int pg)
+        {
+            var clientString = "https://balldontlie.io/api/v1/players/?page=" + pg;
+            var client = new RestClient(clientString);
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            IRestResponse<List<AllPlayers>> response = client.Execute<List<AllPlayers>>(request);
             return response.Data;
         }
     }

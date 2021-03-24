@@ -54,11 +54,15 @@ export class Odds extends Component {
             <>
                 {this.state.isLoaded &&
                     <div>
-                    <BookCard />
-                    <Container style={{ backgroundColor: "#3b3937" }}>
-                        <iframe className="align-right" src="https://veri.bet/x-ajax-events-carousel-x?ref=widget" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style={{ width: "320px", height: "540px", margin: "0px", padding: "0px", backgroundColor: "#3b3937" }}></iframe>
+                        <BookCard />
+                        <Container style={{ backgroundColor: "#3b3937" }}>
+                            <div className="hide" >
+                                <iframe className="align-right " src="https://veri.bet/x-ajax-events-carousel-x?ref=widget" frameborder="0" marginwidth="0" marginheight="0" scrolling="yes" style={{ width: "320px", height: "540px", margin: "0px", padding: "0px", backgroundColor: "#3b3937" }}></iframe>
 
-                        <h1 style={{color: "white"}}>Odds</h1>
+                            </div>
+                            <div className="row justify-content-center">
+                                <h1 style={{ color: "white" }}>Odds</h1>
+                            </div>
                             {this.state.odds.map((game, i) => (
                                 <div className="row justify-content-center">
                                     <Card style={{ width: '40rem' }}>

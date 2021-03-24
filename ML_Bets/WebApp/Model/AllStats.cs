@@ -7,6 +7,6 @@ namespace WebApp
 {
     public class AllStats
     {
-        public List<Stats> data { get; set; }
+        public List<SeasonStats> data { get; set; }
     }
 }

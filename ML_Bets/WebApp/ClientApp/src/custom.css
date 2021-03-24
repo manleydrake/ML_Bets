@@ -22,3 +22,31 @@ code {
     right: 0px;
     padding: 10px;
 }
+.table-main {
+    background-color: rgb(59, 57, 55) !important;
+    color:white!important;
+}
+.table{
+    color:white;
+}
+.react-bootstrap-table .row-expansion-style {
+    padding: 8px;
+    background-color: rgb(59, 57, 55) !important;
+    color: white !important;
+}
+.table thead th  {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: rgb(59, 57, 55) !important;
+    color: white !important;
+}
+.table .table {
+    background-color: rgb(59,57,55);
+}
+
+@media screen and (max-width: 1100px) {
+    .hide {
+        display: none !important;
+        
+    }
+}

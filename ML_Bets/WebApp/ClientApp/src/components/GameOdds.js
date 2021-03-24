@@ -1,5 +1,7 @@
 ﻿import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {  Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Table, Button } from "react-bootstrap";
+import { useHistory, Link } from "react-router-dom";
 
 const ModalExample = (props) => {
     const {
@@ -11,6 +13,14 @@ const ModalExample = (props) => {
 
     const [modal, setModal] = useState(false);
 
+    const handleClick = (e) => {
+        var site = e.target.firstChild.data
+
+        site = 'https://www.' + site + '.com'
+        site.replace(/\s+/g, "")
+        window.location.replace(site);
+    };
+
 
     const toggle = () => setModal(!modal);
 
@@ -20,25 +30,29 @@ const ModalExample = (props) => {
             <Modal isOpen={modal} toggle={toggle} className={className}>
                 <ModalHeader toggle={toggle}>Odds per Book</ModalHeader>
                 <ModalBody>
-                    Home: {props.home}
-                    <br />
-                    Away: {props.away}
-                    <br />
-                    {props.data.map((site, i) => (
-                        <div>
-                            <p>Site: <a href={"https://www."+ site.site_key + ".com"}>{site.site_nice}</a></p>
-                            <p>Odds for {props.home}:{site.odds.h2h[0] } </p>
-                            <p>Odds for {props.away}:{site.odds.h2h[1]}</p>
-                        </div>
+                    <Table dark hover className="table-main" >
+                        <thead>
+                            <tr >
+                                <th>Book Name</th>
+                                <th>{props.home} Odds</th>
+                                <th>{props.away} Odds</th>
+                            </tr>
+                        </thead>
+                        {props.data.map((site, i) => (
+                            <tbody>
+                                <tr onClick={handleClick} className="clickable-row" accessKey={site.site_key}>
 
-                    ))}
-                    <br />
-
+                                    <th scope="row">{site.site_nice}</th>
+                                    <td>{site.odds.h2h[0]}</td>
+                                    <td>{site.odds.h2h[1]}</td>
+                                </tr>
+                            </tbody>))}
+                    </Table>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={toggle}>Go to Predictions</Button>{' '}
-                    <Button color="secondary" onClick={toggle}>Go to Team Stats</Button>
-                    <Button color="secondary" onClick={toggle}>Close</Button>
+                    <Link to="/predictions" className="btn btn-primary">Go to Predictions</Link>
+                    <Link to="/team" className="btn btn-primary">Go to Team Stats</Link>
+                    <Button variant="danger" onClick={toggle}>Close</Button>
                 </ModalFooter>
             </Modal>
         </div>
