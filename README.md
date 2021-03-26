@@ -20,9 +20,9 @@ The purpose of this application is to implement a machine learning algorithm tha
 * Git 
 * Python 
 * SQL 
-* C#
+* ASP.Net MVC (C#)
 * React.js 
-* Bootstrap/Semantic UI Framework 
+* Bootstrap
 * Azure/AWS
 ## High Level Steps for Development 
 1. Scrape NBA Stats using Python Script              DONE (2/21/2021)
