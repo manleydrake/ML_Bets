@@ -2,7 +2,7 @@ name: .NET
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master:NBA-Stat-Analysis-Application/ML_Bets/]
 
 
 jobs:
