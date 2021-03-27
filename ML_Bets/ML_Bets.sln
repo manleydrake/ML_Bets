@@ -34,6 +34,7 @@ Global
 		{B301DCDE-A2FA-4F99-8C0D-BEDD44044A1F}.Release|x64.ActiveCfg = Release|x64
 		{B301DCDE-A2FA-4F99-8C0D-BEDD44044A1F}.Release|x64.Build.0 = Release|x64
 		{B301DCDE-A2FA-4F99-8C0D-BEDD44044A1F}.Release|x86.ActiveCfg = Release|Any CPU
+		{B301DCDE-A2FA-4F99-8C0D-BEDD44044A1F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
