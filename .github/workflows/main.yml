@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1
     - name: Build
-      run: dotnet build  ML_Bets/ML_Bets.sln -c Release -o release --nologo
+      run: dotnet build  ML_Bets/ML_Bets.sln -c Release -o release/wwwroot --nologo
     - name: Go back
       run: cd ..
     - name: show back
