@@ -20,7 +20,7 @@ jobs:
     - name: Build
       run: dotnet build  ML_Bets/ML_Bets.sln -c Release -o release/wwwroot --nologo
     - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: development
