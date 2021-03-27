@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       uses: actions/github-script@v3
       with:
-        script: console.log(context) 
+        script: return dotnet restore NBA-Stat-Analysis-Application/ML_Bets
     - name: Build
       uses: actions/github-script@v3
       with:
