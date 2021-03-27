@@ -1,0 +1,29 @@
+name: .NET
+
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      uses: actions/github-script@v3
+      with:
+        script: dotnet restore NBA-Stat-Analysis-Application/ML_Bets
+    - name: Build
+      uses: actions/github-script@v3
+      with:
+        script: dotnet build --no-restore ./ML_Bets
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
