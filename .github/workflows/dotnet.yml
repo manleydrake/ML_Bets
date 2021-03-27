@@ -24,6 +24,6 @@ jobs:
     - name: Build
       uses: actions/github-script@v3
       with:
-        script: dotnet build --no-restore ./ML_Bets
+        script: dotnet build --no-restore NBA-Stat-Analysis-Application/ML_Bets
     - name: Test
       run: dotnet test --no-build --verbosity normal
