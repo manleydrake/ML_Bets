@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: run
-      run: dotnet run
+      run: dotnet run ML_Bets/ML_Bets.sln
