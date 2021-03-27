@@ -20,10 +20,10 @@ jobs:
     - name: Restore dependencies
       uses: actions/github-script@v3
       with:
-        script: dotnet restore NBA-Stat-Analysis-Application/ML_Bets
+        script: dotnet restore NBA-Stat-Analysis-Application/ML_Bets/ML_Bets.sln
     - name: Build
       uses: actions/github-script@v3
       with:
-        script: dotnet build --no-restore NBA-Stat-Analysis-Application/ML_Bets
+        script: dotnet build --no-restore NBA-Stat-Analysis-Application/ML_Bets/ML_Bets.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal
