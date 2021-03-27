@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run:  dotnet restore NBA-Stat-Analysis-Application/ML_Bets
+      run:  dotnet restore ./NBA-Stat-Analysis-Application/ML_Bets
     - name: Build
-      run: dotnet build --no-restore NBA-Stat-Analysis-Application/ML_Bets
+      run: dotnet build --no-restore ./NBA-Stat-Analysis-Application/ML_Bets
     - name: Test
       run: dotnet test --no-build --verbosity normal
