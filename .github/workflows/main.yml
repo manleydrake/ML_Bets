@@ -20,8 +20,7 @@ jobs:
     - name: Restore dependencies
       run:  dotnet restore ML_Bets/ML_Bets.sln
     - name: Build
-      run: dotnet build --no-restore ML_Bets/ML_Bets.sln 
+      run: dotnet build --configuration ML_Bets/ML_Bets.sln 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: run
-      run: dotnet run ML_Bets/ML_Bets.sln
+
