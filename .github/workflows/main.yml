@@ -19,8 +19,6 @@ jobs:
         dotnet-version: 3.1
     - name: Build
       run: dotnet build  ML_Bets/ML_Bets.sln -c Release -o release --nologo
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
