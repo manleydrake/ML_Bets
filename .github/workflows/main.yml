@@ -19,6 +19,10 @@ jobs:
         dotnet-version: 3.1
     - name: Build
       run: dotnet build  ML_Bets/ML_Bets.sln -c Release -o release --nologo
+    - name: Go back
+      run: cd ..
+    - name: show back
+      run: ls
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
