@@ -22,7 +22,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: find
-      run: cd
+      run: console.log(ls)
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
