@@ -18,7 +18,9 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      uses: actions/github-script@v3
+      with:
+        script: dotnet restore ./ML_Bets
     - name: Build
       uses: actions/github-script@v3
       with:
