@@ -1,7 +1,7 @@
 # Sports Analysis Application  
 The purpose of this application is to implement a machine learning algorithm that applies predictive analysis to determine which team is most likely to win. This will help users decide which team is most beneficial to place bets on.
 
-
+[Live Site]('https://nba-stats-dev-site.azurewebsites.net/')
 ## About 
 
 
