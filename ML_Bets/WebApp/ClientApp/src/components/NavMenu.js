@@ -29,7 +29,7 @@ export class NavMenu extends Component {
                 <header style={{backgroundColor:"white", width:"100%"}}>
                     <Navbar style={{textAlign:"center"}}className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-2" light>
                         <Container>
-                            <NavbarBrand tag={Link} to="/">
+                            <NavbarBrand tag={Link} to="/odds">
                                 ML Bets{/*<img
                                     height='75'
                                     width='75'
@@ -60,9 +60,6 @@ export class NavMenu extends Component {
                                             </DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>
-                                    <NavItem>
-                                        <NavLink tag={Link} className="text-dark" to="/documentation">Documentation</NavLink>
-                                    </NavItem>
                                 </ul>
                             </Collapse>
                         </Container>

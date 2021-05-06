@@ -17,7 +17,7 @@ export default class App extends Component {
     render() {
         return (
             <Layout>
-                <Route exact path='/' component={Home} />
+                <Route exact path='/' component={Odds} />
                 <Route path='/counter' component={Counter} />
                 <Route path='/fetch-data' component={FetchData} />
                 <Route path='/odds' component={Odds} />
